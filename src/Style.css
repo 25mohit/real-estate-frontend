@@ -95,6 +95,7 @@
     padding: 0.4rem;
     font-size: 2.5rem;
     border-radius: 10px;
+    cursor: pointer;
 }
 .stats-bar{
     padding: 4rem 8rem;
