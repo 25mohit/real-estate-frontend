@@ -1,4 +1,3 @@
-import React from 'react'
 import HeroPriceFilterBar from '../../Utils/HeroPriceFilterBar/HeroPriceFilterBar'
 
 const Hero = () => {
