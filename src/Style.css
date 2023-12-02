@@ -89,6 +89,25 @@
     cursor: pointer;
     min-width: 9rem;
 }
+#stats-icon{
+    background-color: rgb(37,47,78);
+    color: white;
+    padding: 0.4rem;
+    font-size: 2.5rem;
+    border-radius: 10px;
+}
 .stats-bar{
     padding: 4rem 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.stats-bar > section{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.stats-bar > section > div{
+    display: flex;
+    flex-direction: column;
 }
