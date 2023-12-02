@@ -49,3 +49,44 @@
     text-align: center;
     font-style: italic;
 }
+.home-layout{
+    display: flex;
+    flex-direction: column;
+}
+.hero{
+    height: 85vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hero .foot{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.price-filter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.244);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    height: 6rem;
+    padding: 0 2rem;
+}
+.price-filter > section {
+    color: white;
+}
+.price-filter > section > select{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    min-width: 9rem;
+    width: fit-content;
+}

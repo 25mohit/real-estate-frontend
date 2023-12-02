@@ -1,8 +1,11 @@
-import React from 'react'
+import HomeBodyLayout from "../../Layout/HomeBodyLayout/HomeBodyLayout"
+import Hero from "../../Section/Hero/Hero"
 
 const Home = () => {
   return (
-    <div>Home</div>
+   <HomeBodyLayout>
+      <Hero />
+   </HomeBodyLayout>
   )
 }
 
