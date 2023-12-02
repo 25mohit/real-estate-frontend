@@ -15,8 +15,6 @@ const HomeBodyLayout = props => {
     observer.observe(navbarRef.current)
   },[])
 
-  console.log("isVisible", isVisible);
-
   return (
     <div className="home-layout">
       <nav ref={navbarRef}>
