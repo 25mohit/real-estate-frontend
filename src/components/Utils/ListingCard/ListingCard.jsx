@@ -32,7 +32,7 @@ const ListingCard = ({showCard}) => {
                 <div>
                     <span>
                         <RiParkingBoxFill />
-                        Parking
+                        2
                     </span>
                     <span>
                         <MdBedroomParent />

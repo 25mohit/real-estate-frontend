@@ -15,13 +15,13 @@ const HomeCardListing = ({ reference,cardsShow }) => {
     const onPrev = () => {
         let width = box?.clientWidth
         box.scrollLeft = box?.scrollLeft - width
-        console.log("scrollLeft", width, box?.scrollLeft);
     }
+
     const onNext = () => {
         let width = box?.clientWidth
         box.scrollLeft = box?.scrollLeft + width
-        console.log("scrollLeft", width, box?.scrollLeft);
     }
+    
   return (
     <div className='home-listing' ref={reference}>
         <BradCrumpBar activeOpt={activeOpt} setActiveOpt={setActiveOpt}/>
@@ -46,7 +46,7 @@ const HomeCardListing = ({ reference,cardsShow }) => {
                     return <ListingCard showCard={index} key={index}/>
                 })
             }
-        </section> }
+        </section>}
         <div className="nav-bar">
             <GrPrevious onClick={onPrev} id="nav-icon"/>
             <GrNext onClick={onNext} id="nav-icon"/>
