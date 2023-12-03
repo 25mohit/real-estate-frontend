@@ -10,16 +10,18 @@ const HomeCardListing = ({ reference,cardsShow }) => {
     useEffect(() => {
         const listingContainer = document.querySelector('.listing-container')
         setBox(listingContainer)
-    },[])
+    },[cardsShow])
 
     const onPrev = () => {
         let width = box?.clientWidth
         box.scrollLeft = box?.scrollLeft - width
+        console.log("box", box, box?.scrollLeft);
     }
 
     const onNext = () => {
         let width = box?.clientWidth
         box.scrollLeft = box?.scrollLeft + width
+        console.log("box", box, box?.scrollLeft);
     }
     
   return (
