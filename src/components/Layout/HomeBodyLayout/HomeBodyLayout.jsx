@@ -6,9 +6,9 @@ const HomeBodyLayout = props => {
   const [isVisible, setIsVisible] = useState(true)
   
   useEffect(() => {
-    console.log(navbarRef.current);
+    // console.log(navbarRef.current);
     const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0]
+      const entry = entries?.[0]
       setIsVisible(entry?.isIntersecting)
       console.log("entry", entry);
     })

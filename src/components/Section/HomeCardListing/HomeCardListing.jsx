@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
 import BradCrumpBar from "../../Utils/BradCrumpBar/BradCrumpBar"
 import ListingCard from "../../Utils/ListingCard/ListingCard"
+import { GrPrevious, GrNext } from "react-icons/gr";
 
-const HomeCardListing = () => {
+const HomeCardListing = ({ reference,cardsShow }) => {
     const [activeOpt, setActiveOpt] = useState('home')
     const [box, setBox] = useState(null)
 
@@ -12,31 +13,43 @@ const HomeCardListing = () => {
     },[])
 
     const onPrev = () => {
-        let width = box.clientWidth
-        box.scrollLeft = box.scrollLeft - width
-        console.log(width);
+        let width = box?.clientWidth
+        box.scrollLeft = box?.scrollLeft - width
+        console.log("scrollLeft", width, box?.scrollLeft);
     }
     const onNext = () => {
-        let width = box.clientWidth
-        box.scrollLeft = box.scrollLeft + width
-        console.log(width);
+        let width = box?.clientWidth
+        box.scrollLeft = box?.scrollLeft + width
+        console.log("scrollLeft", width, box?.scrollLeft);
     }
   return (
-    <div className='home-listing'>
+    <div className='home-listing' ref={reference}>
         <BradCrumpBar activeOpt={activeOpt} setActiveOpt={setActiveOpt}/>
-        <section className="listing-container">
-            <ListingCard />
-            <ListingCard />
-            <ListingCard />
-            <ListingCard />
-            <ListingCard />
-            <ListingCard />
-            <ListingCard />
-            <ListingCard />
-        </section>
+        {cardsShow && <section className="listing-container">
+            {
+               activeOpt === "home" && [1,2,3,4,5,6]?.map((dt, index) => {
+                    return <ListingCard showCard={index} key={index}/>
+                })
+            }
+            {
+               activeOpt === "office" && [1,2,3]?.map((dt, index) => {
+                    return <ListingCard showCard={index} key={index}/>
+                })
+            }
+            {
+               activeOpt === "commercial" && [1,2]?.map((dt, index) => {
+                    return <ListingCard showCard={index} key={index}/>
+                })
+            }
+            {
+               activeOpt === "residential" && [1,2,3,4]?.map((dt, index) => {
+                    return <ListingCard showCard={index} key={index}/>
+                })
+            }
+        </section> }
         <div className="nav-bar">
-            <button onClick={onPrev}>Prev</button>
-            <button onClick={onNext}>Next</button>
+            <GrPrevious onClick={onPrev} id="nav-icon"/>
+            <GrNext onClick={onNext} id="nav-icon"/>
         </div>
     </div>
   )

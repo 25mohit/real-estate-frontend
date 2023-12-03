@@ -2,10 +2,20 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa";
 import { RiParkingBoxFill } from "react-icons/ri";
 import { MdBedroomParent } from "react-icons/md";
+import { useEffect, useState } from "react";
 
-const ListingCard = () => {
+const ListingCard = ({showCard}) => {
+    const [show, setShow] = useState(false)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setShow(true)
+        },Number(`${showCard}00`)+200)
+    },[])
+
+    console.log("show", show, showCard);
   return (
-    <div className="listing-card">
+    <div className="listing-card" style={{opacity:show? '1' : '0', transition:show ? '1s' : ''}}>
         <div className="img-container">
             <img src="./Assets/building.jpg" alt="" />
             <span className="location-chip">

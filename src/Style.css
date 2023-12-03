@@ -135,11 +135,12 @@
 }
 .home-listing{
     padding: 0 8rem;
+    padding-bottom: 1rem;
 }
 .home-listing .listing-container {
     /* padding: 1rem 0; */
     margin: 1rem 0;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
     display: flex;
     overflow: hidden;
     align-items: center;
@@ -151,6 +152,7 @@
     display: flex;
     width: 18rem;
     min-width: 18rem;
+    opacity: 0;
     height: 22.6rem;
     background-color: white;
     flex-direction: column;
@@ -250,9 +252,21 @@
     gap: 0.4rem;
 }
 .nav-bar{
-    padding: 1rem;
+    /* padding: 1rem 0;  */
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: right;
     gap: 2rem;
+}
+#nav-icon{
+    color: rgba(105, 105, 105, 0.639);
+    font-size: 1rem;
+    transition: 0.2s;
+}
+#nav-icon:hover{
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: black;
+    transition: 0.2s;
 }
