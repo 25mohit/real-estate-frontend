@@ -1,13 +1,11 @@
-import { useRef, useState } from "react";
 import { MdOutlineMapsHomeWork } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ isVisible }) => {
   const navigate = useNavigate()
-  
 
   const onSignupHandler = () => {
-    navigate('/user-register')
+    navigate('/user-login')
   }
   
   return (
@@ -24,7 +22,7 @@ const Navbar = ({ isVisible }) => {
           <li>Explore</li>
           <li>Contact</li>
         </ul>
-        <button className='btn contained' onClick={onSignupHandler}>Sign Up</button>
+        <button className='btn contained' onClick={onSignupHandler}>Sign In</button>
       </div>
     </div>
   )
