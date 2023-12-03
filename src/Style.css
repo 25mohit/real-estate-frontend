@@ -112,17 +112,7 @@
     display: flex;
     flex-direction: column;
 }
-.home-listing{
-    padding: 0 8rem;
-}
-.home-listing > section {
-    padding: 1rem 0;
-    padding-bottom: 3rem;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
+
 .brad-crumb-bar{
     display: flex;
     align-items: center;
@@ -143,18 +133,50 @@
     text-decoration-color: var(--blue-color);
     transition: 0.6s;
 }
+.home-listing{
+    padding: 0 8rem;
+}
+.home-listing .listing-container {
+    /* padding: 1rem 0; */
+    margin: 1rem 0;
+    padding-bottom: 3rem;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    scroll-behavior: smooth;
+    gap: 2rem;
+    /* flex-wrap: wrap; */
+}
 .listing-card{
     display: flex;
     width: 18rem;
-    height: 24rem;
+    min-width: 18rem;
+    height: 22.6rem;
+    background-color: white;
     flex-direction: column;
     border-radius: var(--listing-card-border-radius);
     /* overflow: hidden; */
-    box-shadow: 4px 11px 10px 1px rgba(128, 128, 128, 0.457);
+    box-shadow: 5px 11px 10px 1px rgba(173, 173, 173, 0.267);
     /* border: 1px solid gray; */
+    transition: 0.3s;    
+}
+.home-listing > section .listing-card:hover{
+    box-shadow: 0px 0px 10px 1px var(--primary-color);
+    transition: 0.3s;    
+}
+.home-listing > section .listing-card:hover .img-container > img{
+    transform: scale(1.5);
+    transition: 0.2s;
+}
+.home-listing > section:hover .listing-card:not(:hover){
+    background-color: rgba(202, 201, 201, 0.479);
+    opacity: 0.7;
 }
 .listing-card .img-container{
-    height: 80%;
+    height: 78%;
+    /* display: none; */
+    border-radius: var(--listing-card-border-radius) var(--listing-card-border-radius) 0 0;
+    overflow: hidden;
     position: relative;
 }
 .listing-card .img-container .location-chip{
@@ -192,11 +214,12 @@
 .listing-card .img-container > img{
     width: 100%;
     height: 100%;
+    transition: 0.3s;
     border-radius: var(--listing-card-border-radius) var(--listing-card-border-radius) 0 0;
     object-fit: cover;
 }
 .listing-card .stats-container{
-    height: 20%;
+    height: 22%;
     display: flex;
     gap: 0.4rem;
     flex-direction: column;
@@ -225,4 +248,11 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
+}
+.nav-bar{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 2rem;
 }
