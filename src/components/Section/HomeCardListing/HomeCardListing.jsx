@@ -15,13 +15,11 @@ const HomeCardListing = ({ reference,cardsShow }) => {
     const onPrev = () => {
         let width = box?.clientWidth
         box.scrollLeft = box?.scrollLeft - width
-        console.log("box", box, box?.scrollLeft);
     }
 
     const onNext = () => {
         let width = box?.clientWidth
         box.scrollLeft = box?.scrollLeft + width
-        console.log("box", box, box?.scrollLeft);
     }
     
   return (
