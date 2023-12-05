@@ -1,4 +1,4 @@
-import { MdOutlineMapsHomeWork } from "react-icons/md";
+import { MdOutlineMapsHomeWork, MdSell } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = ({ isVisible }) => {
@@ -20,6 +20,7 @@ const Navbar = ({ isVisible }) => {
           <li><Link to="">Featured</Link></li>
           <li><Link to="">Services</Link></li>
           <li><Link to="">Explore</Link></li>
+          <li><Link to="/list-your-property">List Property <MdSell id="sell-icon"/></Link></li>
           <li><Link to="">Contact</Link></li>
         </ul>
         <button className='btn contained' onClick={onSignupHandler}>Sign In</button>

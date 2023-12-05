@@ -12,13 +12,12 @@ const Home = () => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries?.[0]
       setCardsShow(entry?.isIntersecting)
-      console.log("entry", entry);
     })
     observer.observe(cardsRef.current)
   },[])
 
   return (
-   <HomeBodyLayout>
+   <HomeBodyLayout touchTop={true}>
       <Hero />
       <StatsBar />
       <HomeCardListing reference={cardsRef} cardsShow={cardsShow}/>

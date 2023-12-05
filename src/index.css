@@ -11,7 +11,8 @@
     --home-navbar-height: 5rem;
     --blue-color: rgb(37,47,78);
     --gray-color: rgb(134, 134, 134);
-    --listing-card-border-radius: 15px
+    --listing-card-border-radius: 15px;
+    --main-page-padding: 8rem;
 }
 a {
     text-decoration: none;

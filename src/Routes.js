@@ -4,6 +4,7 @@ import LoginPage from "./components/Pages/LoginPage/LoginPage"
 import RegisterPage from "./components/Pages/RegisterPage/RegisterPage"
 import RealStatePage from "./components/Pages/RealStatePage/RealStatePage"
 import AllRealState from "./components/Pages/AllRealState/AllRealState"
+import ListProperty from "./components/Pages/ListProperty/ListProperty"
 
 const AllRoutes = () => {
   return (
@@ -13,6 +14,7 @@ const AllRoutes = () => {
         <Route path="/user-register" exact element={<RegisterPage />} />
         <Route path="/real-state-detail/:propertyID" exact element={<RealStatePage />} />
         <Route path="/all-real-estate" exact element={<AllRealState />} />
+        <Route path="/list-your-property" exact element={<ListProperty />} />
     </Routes>
   )
 }

@@ -23,7 +23,7 @@ const StatsBar = () => {
         <section>
             <FaClock id="stats-icon"/>
             <div>
-                <h3>$ 187,50</h3>
+                <h3>$187,50</h3>
                 <span>Avg  buyer savings</span>
             </div>
         </section>

@@ -118,6 +118,9 @@
 }
 .navbar .items > ul > li a{
     color: black;
+    display: flex;
+    align-items: center;
+    gap: 0.67rem;
 }
 #logo-main{
     font-size: 2.1rem;

@@ -6,11 +6,9 @@ const HomeBodyLayout = props => {
   const [isVisible, setIsVisible] = useState(true)
   
   useEffect(() => {
-    // console.log(navbarRef.current);
     const observer = new IntersectionObserver((entries) => {
       const entry = entries?.[0]
       setIsVisible(entry?.isIntersecting)
-      console.log("entry", entry);
     })
     observer.observe(navbarRef.current)
   },[])
@@ -20,7 +18,7 @@ const HomeBodyLayout = props => {
       <nav ref={navbarRef}>
         <Navbar isVisible={isVisible}/>
       </nav>
-        <section className="body-main">
+        <section className="body-main" style={{marginTop: props.touchTop ? '0' : ''}}>
             {props?.children}
         </section>
     </div>
