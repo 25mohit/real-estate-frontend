@@ -3,9 +3,12 @@ import { FaAngleRight } from "react-icons/fa";
 import { RiParkingBoxFill } from "react-icons/ri";
 import { MdBedroomParent } from "react-icons/md";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ListingCard = ({showCard}) => {
     const [show, setShow] = useState(false)
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         setTimeout(() => {
@@ -13,6 +16,9 @@ const ListingCard = ({showCard}) => {
         },Number(`${showCard}00`)+200)
     },[])
 
+    const navigateToDetail = () => {
+        navigate('real-state-detail/454')
+    }
     console.log("show", show, showCard);
   return (
     <div className="listing-card" style={{opacity:show? '1' : '0', transition:show ? '1s' : ''}}>
@@ -21,7 +27,7 @@ const ListingCard = ({showCard}) => {
             <span className="location-chip">
                 <FaLocationDot /> Rajasthan
             </span>
-            <FaAngleRight id="enter-icon"/>
+            <FaAngleRight id="enter-icon" onClick={navigateToDetail}/>
         </div>
         <div className="stats-container">
             <div>

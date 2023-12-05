@@ -9,7 +9,6 @@ const Home = () => {
   const cardsRef = useRef()
   
   useEffect(() => {
-    // console.log(navbarRef.current);
     const observer = new IntersectionObserver((entries) => {
       const entry = entries?.[0]
       setCardsShow(entry?.isIntersecting)

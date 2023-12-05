@@ -13,3 +13,6 @@
     --gray-color: rgb(134, 134, 134);
     --listing-card-border-radius: 15px
 }
+a {
+    text-decoration: none;
+}

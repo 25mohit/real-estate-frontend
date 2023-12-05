@@ -1,5 +1,5 @@
 import { MdOutlineMapsHomeWork } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = ({ isVisible }) => {
   const navigate = useNavigate()
@@ -10,17 +10,17 @@ const Navbar = ({ isVisible }) => {
   
   return (
     <div className={`navbar ${ !isVisible ? 'show' : ''}`}>
-      <div className="logo">
+      <div className="logo" onClick={() => navigate('/')}>
         <MdOutlineMapsHomeWork id="logo-main"/>
         <h3>Real-Estate</h3>
       </div>
       <div className="items">
         <ul>
-          <li>Home</li>
-          <li>Featured</li>
-          <li>Services</li>
-          <li>Explore</li>
-          <li>Contact</li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="">Featured</Link></li>
+          <li><Link to="">Services</Link></li>
+          <li><Link to="">Explore</Link></li>
+          <li><Link to="">Contact</Link></li>
         </ul>
         <button className='btn contained' onClick={onSignupHandler}>Sign In</button>
       </div>
